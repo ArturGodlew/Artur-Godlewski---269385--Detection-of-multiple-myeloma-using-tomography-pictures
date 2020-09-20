@@ -1,0 +1,27 @@
+﻿<Page x:Class="FinalProject.MainMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalProject"
+        mc:Ignorable="d"
+        d:DesignHeight="300" d:DesignWidth="400"
+        Loaded="OnLoad"
+        Title="MainMenu">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Name="TxtBlockProgramTitle" Text="Welcome to MM detection softwere" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Button Grid.Row="1" Name="BtnGoToSelectScanMenu" Content="Evaluate patient's scan" Click="BtnGoToSelectScanMenuClick" FontSize="20" Margin="20,5,20,5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Button>
+        <Button Grid.Row="2" Name="BtnGoToSelectMultipleScanMenu" Content="Add multiple known results" Click="BtnGoToSelectMultipleScansMenuClick" FontSize="20" Margin="20,5,20,5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Button>
+        <Button Grid.Row="3" Name="BtnGoToUpdateCurrentModelMenu" Content="Update current model" Click="BtnGoToUpdateCurrentModelMenuClick" FontSize="20" Margin="20,5,20,5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Button>
+        <Button Grid.Row="4" Name="BtnGoToUpdateToBestModelMenu" Content="Update to best model" Click="BtnGoToUpdateToBestModelMenuClick" FontSize="20" Margin="20,5,20,5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Button>
+        <Button Grid.Row="5" Name="BtnClose" Content="Close" Click="BtnCloseClick" FontSize="20" Margin="20,5,20,5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Button>
+    </Grid>
+</Page>

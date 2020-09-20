@@ -1,0 +1,26 @@
+﻿<Page x:Class="FinalProject.UpdateModelMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FinalProject"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UpdateModelMenu">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Viewbox Grid.Row="0" Grid.ColumnSpan="2" Margin="20,5,20,5">
+            <TextBlock Name="TxtBlockInfo" TextAlignment="Center" TextWrapping="Wrap"/>
+        </Viewbox>
+        <Button Grid.Row="1" Grid.Column="0" Name="BtnContinue" Content="Continue" Click="BtnContinueClick" FontSize="20" Margin="20,5,20,5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Visibility="Visible"/>
+        <Button Grid.Row="1" Grid.Column="1" Name="BtnCancel" Content="Cancel" Click="BtnCancelClick" FontSize="20" Margin="20,5,20,5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+    </Grid>
+</Page>

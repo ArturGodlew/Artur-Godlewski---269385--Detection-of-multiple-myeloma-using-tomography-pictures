@@ -1,0 +1,2555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3A2F7666-37CF-4D22-A664-45D88575CAB1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FinalProject</RootNamespace>
+    <AssemblyName>FinalProject</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dicom.Core, Version=4.0.6.0, Culture=neutral, PublicKeyToken=3a13f649e28eb09a, processorArchitecture=MSIL">
+      <HintPath>..\packages\fo-dicom.Desktop.4.0.6\lib\net45\Dicom.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Han.Wpf.ViewportControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Han.Wpf.ViewportControl.1.0.1\lib\net461\Han.Wpf.ViewportControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Core.1.1.2\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Shell.1.1.1\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.4.7.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.4.7.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.4.7.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.4.7.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ConfirmSaveResultWindow.xaml.cs">
+      <DependentUpon>ConfirmSaveResultWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorWindow.xaml.cs">
+      <DependentUpon>ErrorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModelUpdatedWindow.xaml.cs">
+      <DependentUpon>ModelUpdatedWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PythonProcessHelper.cs" />
+    <Compile Include="ResultMenu.xaml.cs">
+      <DependentUpon>ResultMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SelectMultipleScansMenu.xaml.cs">
+      <DependentUpon>SelectMultipleScansMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SelectPatientScansMenu.xaml.cs">
+      <DependentUpon>SelectPatientScansMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateModelMenu.xaml.cs">
+      <DependentUpon>UpdateModelMenu.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ConfirmSaveResultWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ErrorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="ModelUpdatedWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResultMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SelectMultipleScansMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SelectPatientScansMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateModelMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ExternalFiles\database.CSV">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\metadata.joblib">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0001-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0002-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0003-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0004-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0005-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0006-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0007-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0008-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0009-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0010-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0011-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0012-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0013-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0014-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0015-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0016-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0017-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0020-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0021-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0022-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0023-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0024-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0025-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0026-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0027-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0028-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0029-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0030-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0031-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0032-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0034-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0035-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0036-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0037-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0038-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0040-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0041-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0042-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0043-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0044-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0045-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0046-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0048-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0049-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0050-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0051-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0052-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0053-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0054-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0055-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0056-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0057-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0059-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0060-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0061-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0062-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0063-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0064-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0065-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0067-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0068-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0069-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0070-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0071-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0072-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0073-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0074-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0075-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0077-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0078-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0079-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0080-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0081-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0082-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0083-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0084-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0085-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0086-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0087-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0088-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0089-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0090-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0091-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0092-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0093-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0094-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0095-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0096-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0097-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0098-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0099-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0100-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0101-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0102-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0103-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0104-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0105-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0106-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0107-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0108-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0109-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0110-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0112-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0113-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0114-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0115-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0116-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0117-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0118-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0119-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0120-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0121-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0122-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0123-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0124-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0125-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0126-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0127-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0128-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0130-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0131-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0132-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0133-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0134-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0135-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0136-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0138-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0139-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0140-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0141-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0142-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0143-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0144-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0146-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0147-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0148-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0149-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0150-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0152-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0153-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0154-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0155-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0156-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0157-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0158-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0159-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0160-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0161-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0162-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0163-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0164-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0165-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0166-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0167-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0168-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0169-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0170-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0171-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0172-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0173-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0174-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0175-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0176-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0177-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0178-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0179-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0180-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0181-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0182-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0183-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0184-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0185-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0186-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0187-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0188-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0189-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0190-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0191-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0192-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0194-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0195-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0197-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0198-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0200-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0201-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0202-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0203-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0205-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0206-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0207-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0208-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0209-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0210-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0211-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0212-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0213-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0214-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0215-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0216-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0217-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0218-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0219-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0220-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0221-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0222-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0223-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0224-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0225-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0226-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0227-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0228-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0229-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0230-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0231-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0232-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0233-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0234-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0235-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0236-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0237-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0238-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0239-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0240-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0241-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0242-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0243-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0244-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0245-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0246-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0247-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0248-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0249-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0250-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0251-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0252-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0253-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0254-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0255-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0256-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0257-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0258-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0259-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0260-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0261-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0262-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0263-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0264-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0265-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0266-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0267-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0268-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0269-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0270-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0271-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0272-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0273-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0274-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0275-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0277-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0278-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0279-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0280-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0281-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0282-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0283-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0284-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0285-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0286-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0287-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0288-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0289-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0290-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0291-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0292-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0293-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0294-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0295-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0296-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0297-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0298-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0299-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0300-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0301-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0302-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0303-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0304-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0305-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0306-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0307-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0309-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0310-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0311-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0312-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0313-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0314-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0315-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0316-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0317-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0319-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0320-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0321-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0322-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0323-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0324-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0325-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0327-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0328-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0329-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0330-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0331-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0332-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0333-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0334-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0335-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0336-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0337-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0338-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0340-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0341-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0342-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0343-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0344-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0345-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0346-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0347-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0348-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0349-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0351-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0352-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0353-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0354-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0355-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0356-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0357-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0358-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0359-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0360-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0361-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0362-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0363-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosNegativeSetExample\IM-0002-0364-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0001-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0002-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0003-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0004-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0005-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0006-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0007-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0008-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0009-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0010-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0011-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0012-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0013-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0014-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0015-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0016-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0017-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0018-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0019-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0020-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0021-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0022-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0023-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0024-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0025-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0026-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0027-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0028-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0029-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0030-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0031-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0032-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0033-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0034-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0035-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0036-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0037-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0038-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0039-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0040-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0041-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0042-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0043-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0044-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0045-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0046-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0047-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0048-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0049-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0050-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0051-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0052-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0053-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0054-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0055-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0056-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0057-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0058-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0059-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0060-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0061-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0062-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0063-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0064-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0065-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0066-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0067-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0068-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0069-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0070-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0071-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0072-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0073-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0074-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0075-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0076-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0077-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0078-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0079-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0080-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0081-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0082-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0083-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0084-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0085-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0086-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0087-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0088-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0089-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0090-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0091-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0092-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0093-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0094-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0095-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0096-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0097-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0098-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0099-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0100-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0101-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0102-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0103-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0104-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0105-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0106-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0107-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0108-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0109-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0110-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0111-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0112-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0113-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0114-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0115-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0116-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0117-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0118-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0119-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0120-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0121-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0122-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0123-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0124-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0125-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0126-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0127-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0128-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0129-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0130-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0131-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0132-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0133-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0134-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0135-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0136-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0137-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0138-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0139-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0140-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0141-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0142-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0143-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0144-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0145-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0146-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0147-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0148-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0149-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0150-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0151-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0152-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0153-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0154-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0155-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0156-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0157-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0158-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0159-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0160-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0161-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0162-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0163-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0164-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0165-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0166-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0167-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0168-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0169-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0170-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0171-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0172-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0173-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0174-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0175-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0176-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0177-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0178-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0179-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0180-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0181-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0182-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0183-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0184-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0185-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0186-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0187-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0188-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0189-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0190-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0191-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0192-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0193-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0194-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0195-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0196-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0197-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0198-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0199-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0200-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0201-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0202-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0203-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0204-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0205-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0206-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0207-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0208-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0209-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0210-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0211-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0212-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0213-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0214-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0215-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0216-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0217-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0218-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0219-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0220-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0221-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0222-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0223-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0224-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0225-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0226-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0227-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0228-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0229-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0230-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0231-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0232-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0233-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0234-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0235-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0236-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0237-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0238-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0239-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0240-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0241-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0242-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0243-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0244-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0245-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0246-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0247-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0248-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0249-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0250-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0251-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0252-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0253-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0254-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0255-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0256-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0257-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0258-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0259-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0260-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0261-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0262-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0263-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0264-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0265-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0266-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0267-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0268-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0269-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0270-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0271-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0272-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0273-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0274-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0275-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0276-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0277-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0278-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0279-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0280-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0281-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0282-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0283-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0284-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0285-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0286-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0287-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0288-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0289-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0290-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0291-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0292-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0293-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0294-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0295-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0296-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0297-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0298-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0299-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0300-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0301-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0302-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0303-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0304-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0305-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0306-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0307-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0308-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0309-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0310-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0311-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0312-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0313-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0314-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0315-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0316-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0317-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0318-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0319-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0320-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0321-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0322-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0323-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0324-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0325-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0326-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0327-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0328-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0329-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0330-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0331-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0332-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0333-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0334-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0335-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0336-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0337-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0338-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0339-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0340-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0341-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0342-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0343-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0344-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0345-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0346-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0347-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0348-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0349-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0350-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0351-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0352-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0353-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0354-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0355-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0356-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0357-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0358-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0359-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0360-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0361-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0362-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0363-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0364-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0365-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0366-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0367-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0368-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0369-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0370-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0371-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0372-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0373-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0374-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0375-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0376-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0377-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0378-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0379-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0380-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0381-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0382-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0383-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0384-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0385-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0386-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0387-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0388-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0389-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0390-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0391-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0392-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0393-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0394-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0395-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0396-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0397-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0398-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0399-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0400-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0401-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0402-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0403-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0404-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0405-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0406-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0407-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0408-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0409-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0410-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0411-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0412-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0413-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0414-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0415-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0416-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0417-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0418-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0419-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0420-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0421-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0422-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0423-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0424-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0425-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0426-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0427-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0428-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0429-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0430-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExternalFiles\PhotosPositiveSetExample\IM-0001-0431-0001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ExternalFiles\FeatureExtractionAndClassification.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ExternalFiles\ModelUpdateAndRecalculation.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\fo-dicom.Desktop.4.0.6\build\net45\fo-dicom.Desktop.targets" Condition="Exists('..\packages\fo-dicom.Desktop.4.0.6\build\net45\fo-dicom.Desktop.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\fo-dicom.Desktop.4.0.6\build\net45\fo-dicom.Desktop.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\fo-dicom.Desktop.4.0.6\build\net45\fo-dicom.Desktop.targets'))" />
+  </Target>
+</Project>
