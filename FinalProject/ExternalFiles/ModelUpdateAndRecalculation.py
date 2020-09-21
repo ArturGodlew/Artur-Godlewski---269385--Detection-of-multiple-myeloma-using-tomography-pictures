@@ -1,15 +1,23 @@
-import pydicom as dicom
-import cv2
+import subprocess
+import sys
+import pkg_resources
+
+required = {'numpy', 'pillow', 'pandas', 'scikit-learn', 'joblib'}
+installed = {pkg.key for pkg in pkg_resources.working_set}
+missing = required - installed
+
+if missing:
+    python = sys.executable
+    subprocess.check_call([python, '-m', 'pip', 'install', *missing], stdout=subprocess.DEVNULL)
+
+
 import numpy as np
 from PIL.Image import fromarray
 import png
 import csv
-import SimpleITK as sitk
 from os import listdir, mkdir, rename, remove, path
 from os.path import isfile, isdir, join
-from radiomics import featureextractor
 import pandas as pd
-import seaborn as sns
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.neural_network import MLPClassifier
@@ -17,7 +25,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 from sklearn import metrics
 from joblib import dump, load
-import os, sys
+import os
 from sklearn.metrics import accuracy_score
 
 def MakeDataSets(dataSet):

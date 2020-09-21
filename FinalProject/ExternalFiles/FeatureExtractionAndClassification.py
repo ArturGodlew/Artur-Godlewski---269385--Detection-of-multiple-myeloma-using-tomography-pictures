@@ -1,3 +1,15 @@
+import subprocess
+import sys
+import pkg_resources
+
+required = {'numpy', 'pydicom', 'opencv-python', 'simpleitk', 'joblib', 'pandas', 'pyradiomics'}
+installed = {pkg.key for pkg in pkg_resources.working_set}
+missing = required - installed
+
+if missing:
+    python = sys.executable
+    subprocess.check_call([python, '-m', 'pip', 'install', *missing], stdout=subprocess.DEVNULL)
+
 import pydicom as dicom
 import cv2
 import numpy as np
@@ -7,9 +19,8 @@ from os import walk, path
 from radiomics import featureextractor
 import pandas as pd
 from joblib import dump, load
-import sys, os
+import os
 import ntpath
-
 
 def convertDCMtoArray(imageDICOM):
   image = imageDICOM.pixel_array * imageDICOM.RescaleSlope + imageDICOM.RescaleIntercept
